@@ -4,90 +4,88 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Animales 182</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Encabezado */
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 0 1em;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    /* Secciones */
+    section {
+      padding: 2em;
+    }
+
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+    }
+
+    .galeria img {
+      width: 200px;
+      height: auto;
+      border: 2px solid #ccc;
+    }
+
+    /* Formulario */
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+    }
+
+    form label {
+      margin-top: 1em;
+    }
+
+    form input, form textarea {
+      padding: 0.5em;
+      margin-top: 0.5em;
+    }
+
+    form button {
+      margin-top: 1em;
+      padding: 0.7em;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Pie de página */
+    footer {
+      background-color: #f1f1f1;
+      text-align: center;
+      padding: 1em;
+    }
+  </style>
 </head>
 <body>
-	<style>
-		/* Estilos generales */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-/* Encabezado */
-header {
-  background-color: #4CAF50;
-  color: white;
-  padding: 1em;
-  text-align: center;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline;
-  margin: 0 1em;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-/* Secciones */
-section {
-  padding: 2em;
-}
-
-.galeria {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1em;
-}
-
-.galeria img {
-  width: 200px;
-  height: auto;
-  border: 2px solid #ccc;
-}
-
-/* Formulario */
-form {
-  display: flex;
-  flex-direction: column;
-  max-width: 400px;
-}
-
-form label {
-  margin-top: 1em;
-}
-
-form input, form textarea {
-  padding: 0.5em;
-  margin-top: 0.5em;
-}
-
-form button {
-  margin-top: 1em;
-  padding: 0.7em;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-/* Pie de página */
-footer {
-  background-color: #f1f1f1;
-  text-align: center;
-  padding: 1em;
-}
-
-	</style>
   <header>
     <h1>Animales 182</h1>
     <nav>
@@ -108,10 +106,9 @@ footer {
     <section id="galeria">
       <h2>Galería</h2>
       <div class="galeria">
-        <!-- Imágenes de ejemplo -->
-        <img src="images/animal1.jpg" alt="Animal 1" />
-        <img src="images/animal2.jpg" alt="Animal 2" />
-        <!-- Agrega más imágenes según sea necesario -->
+        <img src="https://via.placeholder.com/200x150?text=Animal+1" alt="Animal 1" />
+        <img src="https://via.placeholder.com/200x150?text=Animal+2" alt="Animal 2" />
+        <img src="https://via.placeholder.com/200x150?text=Animal+3" alt="Animal 3" />
       </div>
     </section>
 
@@ -136,7 +133,12 @@ footer {
     <p>&copy; 2025 Animales 182. Todos los derechos reservados.</p>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script>
+    document.getElementById('formulario-contacto').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Gracias por tu mensaje. Nos pondremos en contacto contigo pronto.');
+      this.reset();
+    });
+  </script>
 </body>
 </html>
-
